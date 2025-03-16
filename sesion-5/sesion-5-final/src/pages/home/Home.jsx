@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import "./Home.css";
 import { Canvas } from "@react-three/fiber";
 import {
