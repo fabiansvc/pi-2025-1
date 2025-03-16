@@ -1,4 +1,10 @@
-import { Cloud, Environment, Sky, Sparkles, Stars } from "@react-three/drei";
+import {
+  Cloud,
+  // Environment,
+  Sky,
+  Sparkles,
+  Stars,
+} from "@react-three/drei";
 import { Color } from "three";
 
 const Staging = () => {
@@ -46,7 +52,6 @@ const Staging = () => {
         turbidity={10} // Adjusts the sky clarity
       />
     </>
-
     // <Environment
     //   files={"staging/hdris/hospital/hospital-2k.hdr"}
     //   files={[
