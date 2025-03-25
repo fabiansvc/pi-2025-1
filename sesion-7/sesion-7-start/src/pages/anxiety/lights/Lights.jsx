@@ -1,5 +1,6 @@
 import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { CameraHelper } from "three";
 
 const Lights = () => {
   const spotLightRef = useRef();
@@ -11,6 +12,17 @@ const Lights = () => {
     spotLightRef.current.target.position.z = Math.sin(elapsedTime);
     spotLightRef.current.target.updateMatrixWorld(); 
   });
+
+  useEffect(()=>{
+    const shadowCamera = spotLightRef.current.shadow.camera;
+    const cameraHelper = new  CameraHelper(shadowCamera);
+    spotLightRef.current.parent.add(cameraHelper);
+
+    return () => {
+      spotLightRef.current.parent.remove(cameraHelper);
+      cameraHelper.dispose();
+    };
+  }, [spotLightRef])
 
   return (
     <>
