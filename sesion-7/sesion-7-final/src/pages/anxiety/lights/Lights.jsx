@@ -42,6 +42,7 @@ const Lights = () => {
         shadow-mapSize={[128, 128]}
         shadow-camera-near={1}
         shadow-camera-far={2}
+        shadow-normalBias={0.05}
       />
     </>
   );

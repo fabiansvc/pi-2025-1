@@ -7,14 +7,16 @@ export default function Student(props) {
   const { nodes, materials, animations } = useGLTF("/models-3d/student.glb");
   const { actions } = useAnimations(animations, group);
   const [currentAction, setCurrentAction] = useState("Happy");
+
   const [, get] = useKeyboardControls();
 
   useFrame(() => {
     const { sleep } = get();
+
     if (sleep) {
       setCurrentAction("Sleeping");
     }
-    // Fetch fresh data from store
+
     // eslint-disable-next-line no-unused-vars
     const pressed = get().back;
   });
