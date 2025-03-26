@@ -15,7 +15,7 @@ const Anxiety = () => {
       { name: "back", keys: ["ArrowDown", "KeyS"] },
       { name: "left", keys: ["ArrowLeft", "KeyA"] },
       { name: "right", keys: ["ArrowRight", "KeyD"] },
-      { name: "sleep", keys: ["KeyS"] },
+      { name: "sleep", keys: ["KeyC"] },
       { name: "jump", keys: ["Space"] },
     ],
     []

@@ -18,7 +18,6 @@ const Controls = () => {
       console.log("moving");
     }
 
-    // Fetch fresh data from store
     // eslint-disable-next-line no-unused-vars
     const pressed = get().back;
   });
